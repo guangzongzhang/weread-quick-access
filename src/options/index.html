@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>微信读书扩展 - 设置</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 data-i18n="optionsTitle">微信读书扩展 · 设置</h1>
+    </header>
+
+    <!-- 阅读看板 -->
+    <section class="card">
+      <h2>📚 阅读看板</h2>
+      <div id="shelfStats" class="shelf-stats">
+        <div class="stat-item">
+          <div class="stat-value" id="statTotal">-</div>
+          <div class="stat-label">书架总数</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="statReading">-</div>
+          <div class="stat-label">正在阅读</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="statFinished">-</div>
+          <div class="stat-label">已读完</div>
+        </div>
+        <button class="btn btn-primary" id="refreshShelfBtn">刷新书架</button>
+      </div>
+      <div id="shelfBoard" class="shelf-board">
+        <div class="empty-state">加载中...</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="optionsGeneral">通用设置</h2>
+      <label class="switch-row">
+        <div>
+          <div class="switch-label" data-i18n="autoLogin">自动登录</div>
+          <div class="switch-desc" data-i18n="autoLoginDesc">打开微信读书时自动恢复登录态，免去扫码</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="autoLoginSwitch" />
+          <span class="slider"></span>
+        </label>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="accountsTitle">账户管理</h2>
+      <div id="accountList" class="account-list"></div>
+      <button class="btn btn-danger" id="clearAllBtn" data-i18n="clearAllAccounts">清除全部账户</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="privacyTitle">隐私说明</h2>
+      <ul class="privacy-list">
+        <li data-i18n="privacy1">所有账户数据（Cookie、LocalStorage）仅保存在本机浏览器扩展沙箱内（chrome.storage.local），不上传任何服务器。</li>
+        <li data-i18n="privacy2">Cookie 仅保留微信读书登录态相关字段（白名单），且经 AES-GCM 加密后存储。</li>
+        <li data-i18n="privacy3">加密密钥同样保存在扩展沙箱内，其他扩展无法访问本扩展的存储空间。</li>
+        <li data-i18n="privacy4">可在「账户管理」中随时删除任一或全部账户数据，操作即时生效。</li>
+        <li data-i18n="privacy5">已知局限：密钥与密文同库存储，本机其他原生进程理论上仍可读取密文与密钥。如需更高安全性，未来可接入用户解锁密码派生密钥方案。</li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>v2.0.0</span>
+    </footer>
+  </div>
+
+  <script type="module" src="options.ts"></script>
+</body>
+</html>

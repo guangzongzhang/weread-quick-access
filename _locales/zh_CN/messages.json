@@ -1,0 +1,109 @@
+{
+  "extName": {
+    "message": "微信读书快捷访问",
+    "description": "扩展名称"
+  },
+  "extDesc": {
+    "message": "快速访问微信读书，支持多账户管理与免扫码登录。",
+    "description": "扩展描述"
+  },
+  "popupSubtitle": {
+    "message": "多账户 · 免扫码",
+    "description": "弹窗副标题"
+  },
+  "searchPlaceholder": {
+    "message": "搜索书籍...",
+    "description": "搜索框占位符"
+  },
+  "openWeRead": {
+    "message": "打开微信读书",
+    "description": "打开按钮"
+  },
+  "saveAccount": {
+    "message": "保存当前账户",
+    "description": "保存按钮"
+  },
+  "manageAccounts": {
+    "message": "多账户管理",
+    "description": "管理按钮"
+  },
+  "clearAll": {
+    "message": "清除全部",
+    "description": "清除按钮"
+  },
+  "autoLogin": {
+    "message": "自动登录",
+    "description": "自动登录开关"
+  },
+  "autoLoginDesc": {
+    "message": "打开微信读书时自动恢复登录态，免去扫码",
+    "description": "自动登录说明"
+  },
+  "noAccount": {
+    "message": "暂无保存的账户",
+    "description": "空状态"
+  },
+  "savedAccount": {
+    "message": "已保存",
+    "description": "账户副标题"
+  },
+  "shelfTitle": {
+    "message": "最近在读",
+    "description": "书架标题"
+  },
+  "myShelf": {
+    "message": "我的书架",
+    "description": "书架链接"
+  },
+  "myNotes": {
+    "message": "我的笔记",
+    "description": "笔记链接"
+  },
+  "explore": {
+    "message": "发现",
+    "description": "发现链接"
+  },
+  "optionsTitle": {
+    "message": "微信读书扩展 · 设置",
+    "description": "选项页标题"
+  },
+  "optionsGeneral": {
+    "message": "通用设置",
+    "description": "通用设置标题"
+  },
+  "accountsTitle": {
+    "message": "账户管理",
+    "description": "账户管理标题"
+  },
+  "clearAllAccounts": {
+    "message": "清除全部账户",
+    "description": "清除全部按钮"
+  },
+  "privacyTitle": {
+    "message": "隐私说明",
+    "description": "隐私说明标题"
+  },
+  "privacy1": {
+    "message": "所有账户数据（Cookie、LocalStorage）仅保存在本机浏览器扩展沙箱内（chrome.storage.local），不上传任何服务器。"
+  },
+  "privacy2": {
+    "message": "Cookie 仅保留微信读书登录态相关字段（白名单），且经 AES-GCM 加密后存储。"
+  },
+  "privacy3": {
+    "message": "加密密钥同样保存在扩展沙箱内，其他扩展无法访问本扩展的存储空间。"
+  },
+  "privacy4": {
+    "message": "可在「账户管理」中随时删除任一或全部账户数据，操作即时生效。"
+  },
+  "privacy5": {
+    "message": "已知局限：密钥与密文同库存储，本机其他原生进程理论上仍可读取密文与密钥。如需更高安全性，未来可接入用户解锁密码派生密钥方案。"
+  },
+  "cmdOpenPopup": {
+    "message": "打开微信读书弹窗",
+    "description": "快捷键描述"
+  },
+  "cmdSearch": {
+    "message": "在微信读书搜索",
+    "description": "快捷键描述"
+  }
+}

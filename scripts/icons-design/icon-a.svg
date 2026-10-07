@@ -1,0 +1,35 @@
+<!-- 方案 A（优化版）：微信读书绿圆角方底 + 白色打开书本 + 右下对话气泡 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0AD16B"/>
+      <stop offset="100%" stop-color="#06A050"/>
+    </linearGradient>
+    <linearGradient id="bookA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E8F8EF"/>
+    </linearGradient>
+  </defs>
+  <!-- 圆角方形背景 -->
+  <rect x="4" y="4" width="120" height="120" rx="28" ry="28" fill="url(#bgA)"/>
+
+  <!-- 左页（打开的书） -->
+  <path d="M30 38 Q44 34 56 38 V88 Q44 84 30 88 Z" fill="url(#bookA)"/>
+  <!-- 右页 -->
+  <path d="M98 38 Q84 34 72 38 V88 Q84 84 98 88 Z" fill="url(#bookA)"/>
+  <!-- 中缝/书脊 -->
+  <path d="M56 38 Q64 34 72 38 V88 Q64 84 56 88 Z" fill="#D6F0E0"/>
+
+  <!-- 书页文字线（左页） -->
+  <line x1="36" y1="50" x2="50" y2="50" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="36" y1="58" x2="48" y2="58" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="36" y1="66" x2="46" y2="66" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 书页文字线（右页） -->
+  <line x1="78" y1="50" x2="92" y2="50" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="78" y1="58" x2="90" y2="58" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="78" y1="66" x2="88" y2="66" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- 右下对话气泡（微信风格），不压书脊 -->
+  <path d="M86 78 Q96 78 100 86 Q104 94 96 100 L86 100 L80 104 L82 100 Q76 96 78 88 Q80 80 86 78 Z"
+        fill="#FFFFFF" opacity="0.95"/>
+</svg>

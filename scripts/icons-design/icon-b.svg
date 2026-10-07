@@ -1,0 +1,26 @@
+<!-- 方案 B：渐变蓝绿 - 圆形背景 + 白色书本+声波线 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5C95FF"/>
+      <stop offset="100%" stop-color="#07C160"/>
+    </linearGradient>
+    <linearGradient id="bookB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D6E8FF"/>
+    </linearGradient>
+  </defs>
+  <!-- 圆形背景 -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgB)"/>
+  <!-- 内圈描边 -->
+  <circle cx="64" cy="64" r="60" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <!-- 打开的书本 -->
+  <path d="M30 44 Q40 40 52 42 V88 Q40 86 30 90 Z" fill="url(#bookB)"/>
+  <path d="M98 44 Q88 40 76 42 V88 Q88 86 98 90 Z" fill="url(#bookB)"/>
+  <path d="M52 42 Q64 38 76 42 V88 Q64 84 52 88 Z" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <!-- 声波/阅读线 -->
+  <line x1="40" y1="56" x2="48" y2="56" stroke="#5C95FF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="40" y1="64" x2="48" y2="64" stroke="#5C95FF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="56" x2="88" y2="56" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="64" x2="88" y2="64" stroke="#07C160" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

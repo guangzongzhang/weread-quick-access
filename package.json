@@ -1,0 +1,36 @@
+{
+  "name": "weread-quick-access",
+  "version": "2.0.0",
+  "description": "微信读书快捷访问 - 多账户管理 + 免扫码登录 + 书架预览",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "icons": "tsx scripts/generate-icons.ts"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.12.0"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^3.0.0",
+    "@types/chrome": "^0.0.270",
+    "@types/node": "^20.14.0",
+    "@types/webextension-polyfill": "^0.12.1",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.2",
+    "sharp": "^0.35.5",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.4",
+    "vite-plugin-zip-pack": "^1.2.0",
+    "vitest": "^2.0.4"
+  }
+}

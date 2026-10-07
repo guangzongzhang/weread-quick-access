@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>微信读书快捷访问</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">📚</div>
+    <h1 class="title" data-i18n="extName">微信读书</h1>
+    <p class="subtitle" data-i18n="popupSubtitle">多账户 · 免扫码</p>
+  </header>
+
+  <!-- Tab 导航 -->
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="home">首页</button>
+    <button class="tab-btn" data-tab="settings">设置</button>
+  </nav>
+
+  <!-- 首页 Tab -->
+  <div class="tab-content active" id="tab-home">
+    <div id="continueReading" class="continue-reading" hidden>
+      <div class="continue-reading-cover">
+        <img id="continueCover" src="" alt="" onerror="this.style.display='none'" />
+      </div>
+      <div class="continue-reading-meta">
+        <p class="continue-reading-label">继续阅读</p>
+        <p id="continueTitle" class="continue-reading-title">—</p>
+        <p id="continueAuthor" class="continue-reading-author">—</p>
+        <p id="continueMeta" class="continue-reading-meta-text"></p>
+      </div>
+      <button id="continueBtn" class="continue-reading-btn">续读</button>
+    </div>
+
+    <section id="accountSection" class="account-section">
+      <div class="empty-state">
+        <div class="empty-icon">⏳</div>
+        <div>加载中...</div>
+      </div>
+    </section>
+
+    <section id="shelfSection" class="shelf-section">
+      <div class="empty-state">
+        <div class="empty-icon">⏳</div>
+        <div>加载中...</div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="搜索书籍..."
+        data-i18n-placeholder="searchPlaceholder"
+      />
+      <div id="searchResults" class="search-results" hidden></div>
+    </section>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="openBtn" data-i18n="openWeRead">打开微信读书</button>
+      <button class="btn btn-secondary" id="saveBtn" data-i18n="saveAccount">保存当前账户</button>
+    </div>
+  </div>
+
+  <!-- 设置 Tab -->
+  <div class="tab-content" id="tab-settings">
+    <!-- 阅读看板 -->
+    <section class="settings-section">
+      <div class="settings-section-header">
+        <h3>📚 阅读看板</h3>
+        <button class="btn-mini" id="refreshShelfBtn">刷新</button>
+      </div>
+      <div class="shelf-stats-mini">
+        <div class="stat-item-mini">
+          <div class="stat-value-mini" id="statTotal">-</div>
+          <div class="stat-label-mini">书架总数</div>
+        </div>
+        <div class="stat-item-mini">
+          <div class="stat-value-mini" id="statReading">-</div>
+          <div class="stat-label-mini">正在阅读</div>
+        </div>
+        <div class="stat-item-mini">
+          <div class="stat-value-mini" id="statFinished">-</div>
+          <div class="stat-label-mini">已读完</div>
+        </div>
+      </div>
+      <div id="shelfBoard" class="shelf-board-mini">
+        <div class="empty-state">加载中...</div>
+      </div>
+    </section>
+
+    <!-- 自动登录 -->
+    <section class="settings-section">
+      <h3>⚙️ 通用设置</h3>
+      <label class="switch-row">
+        <div>
+          <div class="switch-label" data-i18n="autoLogin">自动登录</div>
+          <div class="switch-desc" data-i18n="autoLoginDesc">打开微信读书时自动恢复登录态，免去扫码</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="autoLoginSwitch" />
+          <span class="slider"></span>
+        </label>
+      </label>
+    </section>
+
+    <!-- 账户管理 -->
+    <section class="settings-section">
+      <h3>👤 账户管理</h3>
+      <div id="accountList" class="account-list-mini"></div>
+      <button class="btn btn-danger btn-small" id="clearAllBtn" data-i18n="clearAllAccounts">清除全部账户</button>
+    </section>
+
+    <!-- 隐私说明 -->
+    <section class="settings-section">
+      <h3>🔒 隐私说明</h3>
+      <ul class="privacy-list-mini">
+        <li>所有账户数据仅保存在本机浏览器扩展沙箱内，不上传任何服务器。</li>
+        <li>Cookie 仅保留微信读书登录态相关字段，且经 AES-GCM 加密后存储。</li>
+        <li>可在「账户管理」中随时删除账户数据，操作即时生效。</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <footer class="footer">v2.0.0 · <span id="jsStatus">JS加载中</span></footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const status = document.getElementById('jsStatus');
+      if (status) status.textContent = 'DOM就绪，等模块...';
+    });
+  </script>
+  <script type="module" src="popup.ts"></script>
+</body>
+</html>

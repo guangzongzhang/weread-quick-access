@@ -1,0 +1,109 @@
+{
+  "extName": {
+    "message": "WeRead Quick Access",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Quickly access WeRead with multi-account management and QR-code-free login.",
+    "description": "Extension description"
+  },
+  "popupSubtitle": {
+    "message": "Multi-account · No QR",
+    "description": "Popup subtitle"
+  },
+  "searchPlaceholder": {
+    "message": "Search books...",
+    "description": "Search placeholder"
+  },
+  "openWeRead": {
+    "message": "Open WeRead",
+    "description": "Open button"
+  },
+  "saveAccount": {
+    "message": "Save Current Account",
+    "description": "Save button"
+  },
+  "manageAccounts": {
+    "message": "Manage Accounts",
+    "description": "Manage button"
+  },
+  "clearAll": {
+    "message": "Clear All",
+    "description": "Clear button"
+  },
+  "autoLogin": {
+    "message": "Auto Login",
+    "description": "Auto login toggle"
+  },
+  "autoLoginDesc": {
+    "message": "Automatically restore login state when opening WeRead, no QR scan needed",
+    "description": "Auto login description"
+  },
+  "noAccount": {
+    "message": "No saved account",
+    "description": "Empty state"
+  },
+  "savedAccount": {
+    "message": "Saved",
+    "description": "Account subtitle"
+  },
+  "shelfTitle": {
+    "message": "Recent Reading",
+    "description": "Shelf title"
+  },
+  "myShelf": {
+    "message": "My Shelf",
+    "description": "Shelf link"
+  },
+  "myNotes": {
+    "message": "My Notes",
+    "description": "Notes link"
+  },
+  "explore": {
+    "message": "Explore",
+    "description": "Explore link"
+  },
+  "optionsTitle": {
+    "message": "WeRead Extension · Settings",
+    "description": "Options title"
+  },
+  "optionsGeneral": {
+    "message": "General Settings",
+    "description": "General settings title"
+  },
+  "accountsTitle": {
+    "message": "Account Management",
+    "description": "Accounts title"
+  },
+  "clearAllAccounts": {
+    "message": "Clear All Accounts",
+    "description": "Clear all button"
+  },
+  "privacyTitle": {
+    "message": "Privacy Notice",
+    "description": "Privacy title"
+  },
+  "privacy1": {
+    "message": "All account data (Cookies, LocalStorage) is stored only in this browser's extension sandbox (chrome.storage.local) and never uploaded to any server."
+  },
+  "privacy2": {
+    "message": "Only WeRead login-related cookie fields (whitelist) are kept, encrypted with AES-GCM before storage."
+  },
+  "privacy3": {
+    "message": "The encryption key also lives inside the extension sandbox; other extensions cannot access this extension's storage."
+  },
+  "privacy4": {
+    "message": "You can delete any or all account data at any time in Account Management; changes take effect immediately."
+  },
+  "privacy5": {
+    "message": "Known limitation: the key and ciphertext share the same storage, so other native processes on this machine could theoretically read both. For higher security, a future version may derive keys from a user unlock password."
+  },
+  "cmdOpenPopup": {
+    "message": "Open WeRead popup",
+    "description": "Shortcut description"
+  },
+  "cmdSearch": {
+    "message": "Search in WeRead",
+    "description": "Shortcut description"
+  }
+}

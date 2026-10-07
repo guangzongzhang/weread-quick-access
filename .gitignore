@@ -1,0 +1,32 @@
+# 依赖
+node_modules/
+
+# 构建输出
+dist/
+release/
+*.zip
+
+# Trae / IDE
+.trae/
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+npm-debug.log*
+
+# 环境变量
+.env
+.env.local
+
+# 图标生成中间产物（SVG 源文件保留）
+scripts/icons-design/preview/
+
+# 临时日志
+install.log
+build.log
+test.log
