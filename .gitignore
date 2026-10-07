@@ -3,8 +3,6 @@ node_modules/
 
 # 构建输出
 dist/
-release/
-*.zip
 
 # Trae / IDE
 .trae/
