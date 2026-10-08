@@ -33,11 +33,21 @@ Chrome MV3 / Edge MV3 扩展：快速访问微信读书，支持多账户管理�
 - **i18n**：中英文双语
 - **隐私说明页**：透明披露数据存储方式
 
-## 安装
+## 下载安装（非开发者推荐）
+
+1. 从 [Releases](https://github.com/guangzongzhang/weread-quick-access/releases) 下载最新版 `weread-v2.zip`
+2. 解压到任意文件夹
+3. 打开 `chrome://extensions`（Edge: `edge://extensions`）
+4. 开启「开发者模式」
+5. 点击「加载已解压的扩展程序」→ 选择解压后的文件夹
+
+## 从源码构建
 
 ```bash
 npm install
+npm run build
 ```
+然后加载 `dist/` 目录。
 
 ## 开发
 
